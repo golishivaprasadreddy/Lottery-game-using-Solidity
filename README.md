@@ -58,7 +58,6 @@ Resets the players list.
 
 
 
-
 ---
 
 How to Deploy & Play
@@ -68,11 +67,9 @@ How to Deploy & Play
 Use Remix IDE or Hardhat with a test Ethereum network.
 
 
-
 2. Players Enter the Game:
 
 Players call the enter() function with 1 Ether.
-
 
 
 3. Manager Picks a Winner:
