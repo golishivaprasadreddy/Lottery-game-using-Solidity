@@ -151,7 +151,3 @@ Reduce storage variables to save gas costs.
 
 
 
----
-
-Would you like any modifications or additional features such as a time-based draw or multiple winners?
-
