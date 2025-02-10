@@ -21,54 +21,7 @@ Smart Contract Features
 
 
 
----
 
-Solidity Smart Contract
-
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract Lottery {
-    address public manager;
-    address payable[] public players;
-
-    constructor() {
-        manager = msg.sender; // Owner of the contract
-    }
-
-    // Function to enter the lottery (requires 1 Ether)
-    function enter() public payable {
-        require(msg.value == 1 ether, "Entry fee is 1 Ether");
-        players.push(payable(msg.sender));
-    }
-
-    // Function to get a random number (Not truly random)
-    function random() private view returns (uint) {
-        return uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty, players.length)));
-    }
-
-    // Function to pick a winner (Only manager can call)
-    function pickWinner() public restricted {
-        require(players.length >= 3, "Minimum 3 players required");
-        uint index = random() % players.length;
-        players[index].transfer(address(this).balance);
-        players = new address payable Reset players list
-    }
-
-    // Modifier to restrict access to manager
-    modifier restricted() {
-        require(msg.sender == manager, "Only manager can call this function");
-        _;
-    }
-
-    // Function to get all players
-    function getPlayers() public view returns (address payable[] memory) {
-        return players;
-    }
-}
-
-
----
 
 Explanation of the Contract
 
