@@ -83,24 +83,3 @@ After at least 3 players join, the manager calls pickWinner() to select and rewa
 
 
 
----
-
-Security Considerations
-
-Randomness Issue:
-
-keccak256 is not truly random. Consider integrating Chainlink VRF for better randomness.
-
-
-Reentrancy Attacks:
-
-Ensure Solidity version 0.8.0+ (which includes built-in reentrancy protections).
-
-
-Gas Optimization:
-
-Reduce storage variables to save gas costs.
-
-
-
-
