@@ -2,7 +2,6 @@ Lottery Game Smart Contract Using Solidity
 
 A lottery game in Solidity operates on the Ethereum blockchain and allows players to participate by contributing a fixed amount of Ether. Once the required number of players enter, a winner is randomly selected, and the total pool is transferred to them.
 
-
 ---
 
 Smart Contract Features
